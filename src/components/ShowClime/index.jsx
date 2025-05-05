@@ -53,8 +53,9 @@ const ShowClime = () => {
     }
 
     async function searchCityPrevision() {
-        const API_KEY = '48bfdb31f6e440ffb55112831251504'
-        const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${inputCity}&days=3&lang=pt`);
+        const API_KEY = import.meta.env.VITE_API_KEY
+        const API_URL = import.meta.env.VITE_WEATHER_API
+        const res = await fetch(`${API_URL}/forecast.json?key=${API_KEY}&q=${inputCity}&days=3&lang=pt`);
         const data = await res.json();
         setWeatherForecast(data)
         return data;

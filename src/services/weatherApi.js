@@ -1,10 +1,11 @@
 
 
 export async function requestApi(city) {
-    const API_KEY = '48bfdb31f6e440ffb55112831251504'
+    const API_KEY = import.meta.env.VITE_API_KEY
+    const API_URL = import.meta.env.VITE_WEATHER_API
     
     try {
-        const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&lang=pt`)
+        const res = await fetch(`${API_URL}/current.json?key=${API_KEY}&q=${city}&lang=pt`)
         const data = await res.json()
         console.log('passou por aqui', data)
         return data;
