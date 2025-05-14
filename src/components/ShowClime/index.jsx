@@ -27,7 +27,7 @@ const ShowClime = () => {
     },[])
     
     const handleChange = (event) => {
-        event.preventDefault
+        event.preventDefault()
         setInputCity(event.target.value)
     }
     async function searchCity() {
