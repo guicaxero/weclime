@@ -16,7 +16,7 @@ const ShowClime = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await requestApi('Rio de Janeiro')
+                const data = await requestApi('Niteroi')
                 setWeatherData(data);
             } catch (error) {
                 console.error('Falha na Requisição', error)
