@@ -43,7 +43,7 @@ const ShowClime = () => {
                 });
             }
         } catch (error) {
-            console.error('Falha ao Buscar a cidade')
+            console.error('Falha ao Buscar a cidade', error)
         }
     }
 
